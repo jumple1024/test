@@ -1,3 +1,4 @@
+// 生成座位列表,并随机生成几个已经被购买的座位
 let seats = document.getElementById('seats-main');
 let seatlist = document.createElement('div');
 for (let i = 1; i < 10; i++) {
@@ -16,29 +17,31 @@ for (let i = 1; i < 10; i++) {
 }
 seats.appendChild(seatlist);
 let pricenum = 0;
+// 添加点击事件
 seats.addEventListener('click', (e) => {
-    let btn = e.target;
-    let arr = [btn.className];
-    if (arr[0] == 'seat') {
-        btn.classList.add('ableseat');
-        let id = btn.getAttribute('data-num').split("-");
-        addbox(id);
-        pricenum++;
-        count();
-    } else {
-        if (arr.indexOf('ableseat')) {
-            let id = btn.getAttribute('data-num');
-            subbox(id);
-            btn.classList.remove('ableseat');
-            pricenum--;
+        let btn = e.target;
+        let arr = [btn.className];
+        if (arr[0] == 'seat') {
+            btn.classList.add('ableseat');
+            let id = btn.getAttribute('data-num').split("-");
+            addbox(id);
+            pricenum++;
             count();
+        } else {
+            if (arr.indexOf('ableseat')) {
+                let id = btn.getAttribute('data-num');
+                subbox(id);
+                btn.classList.remove('ableseat');
+                pricenum--;
+                count();
+            }
         }
-    }
-})
-
+    })
+    // 侧边栏增加购买的座位号
 function addbox(id) {
     let box = document.getElementById('seatmini');
     let div = document.createElement('div');
+    // 侧边栏提示信息隐藏
     let p = document.getElementById('tips');
     p.setAttribute('class', 'none');
     div.setAttribute('class', 'seat-num');
@@ -48,14 +51,14 @@ function addbox(id) {
     `;
     box.appendChild(div)
 }
-
+// 取消座位后去除侧边栏座位号
 function subbox(id) {
     let box = document.getElementById('seatmini');
     let div = document.getElementById(`${id}`);
     box.removeChild(div);
 
 }
-
+// 计算总价
 function count() {
     let div = document.getElementById('pricemonry');
     div.innerText = pricenum * 66;
@@ -71,8 +74,7 @@ function count() {
     }
 }
 
-
-
+// 渲染侧边栏电影,电影院信息
 var url = decodeURI(window.location.href);
 var backToPreUrl = url.split("?");
 getcinema()

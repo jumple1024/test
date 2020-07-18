@@ -2,7 +2,7 @@ var url = decodeURI(window.location.href);
 var backToPreUrl = url.split("?");
 getcinema()
 getmovies()
-
+    // 得到电影院数据并渲染到页面
 function getcinema() {
     ajax({
         url: '/cinema/getcinema',
@@ -21,7 +21,7 @@ function getcinema() {
         }
     })
 }
-
+// 得到电影数据并渲染到页面
 function getmovies() {
     ajax({
         url: '/moviescinema/getmoviescinema',
@@ -41,7 +41,7 @@ function getmovies() {
         }
     })
 }
-
+// 购票页面跳转并传递电影信息,电影院信息
 function jump() {
     location.href = `selectionSeat.html?${backToPreUrl[1]}?${backToPreUrl[2]}`
 }

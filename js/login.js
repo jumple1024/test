@@ -12,9 +12,7 @@ function tologin() {
     sign.classList.add('disnone')
     login.classList.remove('disnone')
 }
-
 // 登录判断
-
 function login() {
     let username = document.getElementById('user').value;
     let userpaswd = document.getElementById('passwd').value;
@@ -39,7 +37,7 @@ function login() {
     }
 
 }
-
+// 注册
 function sign() {
     let username = document.getElementById('suser').value;
     let userpaswd = document.getElementById('spasswd').value;

@@ -1,110 +1,113 @@
 // 影院数据
 let cinemas = [{
-        name: '太平洋影城（北欧知识城店）',
-        adress: '新都区斑竹园镇中利路169号北欧商业广场4号楼4楼',
-        money: 59.9,
-        away: 6,
-        func: ['改签', '折扣卡'],
-        url: 'https://p1.meituan.net/deal/201208/22/1_0822151022.jpg@292w_292h_1e_1c',
-        phonenum: '082-55551455'
-    },
-    {
-        name: '承光国际影城',
-        adress: '新都区斑竹园镇中利路169号北欧商业广场4号楼4楼',
-        money: 43,
-        away: 12,
-        func: ['退', '改签', '折扣卡'],
-        url: 'https://p0.meituan.net/mogu/6b672611a200c5c5a4a24120c6f0dc77832306.png@292w_292h_1e_1c',
-        phonenum: '028 - 65524525'
-    },
-    {
-        name: '联娱国际影城（兰天店）',
-        adress: '金堂县赵镇新建路133号兰天城市广场5号楼四楼',
-        money: 56,
-        away: 26,
-        func: ['退', '改签', '折扣卡'],
-        url: 'https://p1.meituan.net/deal/201208/22/1_0822151022.jpg@292w_292h_1e_1c',
-        phonenum: '-028-5449155'
-    },
-    {
-        name: '万达影城（双流万达广场店）',
-        adress: '双流区星空路二段万达广场四楼',
-        money: 66,
-        away: 5,
-        func: ['退', '改签', '折扣卡', '杜比全景音厅', 'Dolby Cinema厅', '儿童厅'],
-        url: 'https://p1.meituan.net/deal/201208/22/1_0822151022.jpg@292w_292h_1e_1c',
-        phonenum: '028-484966165'
-    },
-    {
-        name: '天智创客影城（川外店）',
-        adress: '都江堰市大观镇高尔夫大街367号四川外国语大学成都学院33栋百汇园4楼',
-        money: 45,
-        away: 36,
-        func: ['退', '改签', '折扣卡'],
-        url: 'https://p1.meituan.net/deal/201208/22/1_0822151022.jpg@292w_292h_1e_1c',
-        phonenum: '028-494984984684'
-    },
-    {
-        name: '太平洋影城（羊安店）',
-        adress: '邛崃市永康大道33号',
-        money: 50,
-        away: 125,
-        func: ['退', '改签', '折扣卡'],
-        url: 'https://p0.meituan.net/deal/49be8ab891f27af351f50ebbeb56909e214831.jpg@292w_292h_1e_1c',
-        phonenum: '028-746855689'
+            name: '太平洋影城（北欧知识城店）',
+            adress: '新都区斑竹园镇中利路169号北欧商业广场4号楼4楼',
+            money: 59.9,
+            away: 6,
+            func: ['改签', '折扣卡'],
+            url: 'https://p1.meituan.net/deal/201208/22/1_0822151022.jpg@292w_292h_1e_1c',
+            phonenum: '082-55551455'
+        },
+        {
+            name: '承光国际影城',
+            adress: '新都区斑竹园镇中利路169号北欧商业广场4号楼4楼',
+            money: 43,
+            away: 12,
+            func: ['退', '改签', '折扣卡'],
+            url: 'https://p0.meituan.net/mogu/6b672611a200c5c5a4a24120c6f0dc77832306.png@292w_292h_1e_1c',
+            phonenum: '028 - 65524525'
+        },
+        {
+            name: '联娱国际影城（兰天店）',
+            adress: '金堂县赵镇新建路133号兰天城市广场5号楼四楼',
+            money: 56,
+            away: 26,
+            func: ['退', '改签', '折扣卡'],
+            url: 'https://p1.meituan.net/deal/201208/22/1_0822151022.jpg@292w_292h_1e_1c',
+            phonenum: '-028-5449155'
+        },
+        {
+            name: '万达影城（双流万达广场店）',
+            adress: '双流区星空路二段万达广场四楼',
+            money: 66,
+            away: 5,
+            func: ['退', '改签', '折扣卡', '杜比全景音厅', 'Dolby Cinema厅', '儿童厅'],
+            url: 'https://p1.meituan.net/deal/201208/22/1_0822151022.jpg@292w_292h_1e_1c',
+            phonenum: '028-484966165'
+        },
+        {
+            name: '天智创客影城（川外店）',
+            adress: '都江堰市大观镇高尔夫大街367号四川外国语大学成都学院33栋百汇园4楼',
+            money: 45,
+            away: 36,
+            func: ['退', '改签', '折扣卡'],
+            url: 'https://p1.meituan.net/deal/201208/22/1_0822151022.jpg@292w_292h_1e_1c',
+            phonenum: '028-494984984684'
+        },
+        {
+            name: '太平洋影城（羊安店）',
+            adress: '邛崃市永康大道33号',
+            money: 50,
+            away: 125,
+            func: ['退', '改签', '折扣卡'],
+            url: 'https://p0.meituan.net/deal/49be8ab891f27af351f50ebbeb56909e214831.jpg@292w_292h_1e_1c',
+            phonenum: '028-746855689'
 
-    },
-    {
-        name: '太平洋影城（新津店）',
-        adress: '新津县迎宾大道74号（原艺术中心）',
-        money: 23,
-        away: 70,
-        func: ['改签', '折扣卡'],
-        url: 'https://p1.meituan.net/deal/__38052895__2954803.jpg@292w_292h_1e_1c',
-        phonenum: '028-9656855'
+        },
+        {
+            name: '太平洋影城（新津店）',
+            adress: '新津县迎宾大道74号（原艺术中心）',
+            money: 23,
+            away: 70,
+            func: ['改签', '折扣卡'],
+            url: 'https://p1.meituan.net/deal/__38052895__2954803.jpg@292w_292h_1e_1c',
+            phonenum: '028-9656855'
 
-    }
-]
+        }
+    ]
+    // 电影数据
 let movies = [{
-        name: '天气之子',
-        url: 'https://p0.meituan.net/movie/ecca4f0b95340b2c57006a1bace4c3f91386100.jpg@160w_220h_1e_1c',
-        num: 9.2,
-        mix: 'mix2d'
-    }, {
-        name: '误杀',
-        url: 'https://p1.meituan.net/movie/967b253953bc7e660cfadbf9d78f67b62852693.jpg@160w_220h_1e_1c',
-        num: 9.4,
-        mix: 'mix2d'
-    }, {
-        name: '哪吒:魔童降世',
-        url: 'https://p0.meituan.net/movie/005955214d5b3e50c910d7a511b0cb571445301.jpg@160w_220h_1e_1c',
-        num: 9.6,
-        mix: 'mix3d'
-    },
-    {
-        name: '我和我的祖国',
-        url: 'https://p0.meituan.net/moviemachine/b2c5c74d33e45745fd3462e44b3698e18336620.jpg@160w_220h_1e_1c',
-        num: 9.7,
-        mix: 'mix2d'
-    }
-]
+            name: '天气之子',
+            url: 'https://p0.meituan.net/movie/ecca4f0b95340b2c57006a1bace4c3f91386100.jpg@160w_220h_1e_1c',
+            num: 9.2,
+            mix: 'mix2d'
+        }, {
+            name: '误杀',
+            url: 'https://p1.meituan.net/movie/967b253953bc7e660cfadbf9d78f67b62852693.jpg@160w_220h_1e_1c',
+            num: 9.4,
+            mix: 'mix2d'
+        }, {
+            name: '哪吒:魔童降世',
+            url: 'https://p0.meituan.net/movie/005955214d5b3e50c910d7a511b0cb571445301.jpg@160w_220h_1e_1c',
+            num: 9.6,
+            mix: 'mix3d'
+        },
+        {
+            name: '我和我的祖国',
+            url: 'https://p0.meituan.net/moviemachine/b2c5c74d33e45745fd3462e44b3698e18336620.jpg@160w_220h_1e_1c',
+            num: 9.7,
+            mix: 'mix2d'
+        }
+    ]
+    // 首页正在热映电影数据
 let hotmovies = [{
-        name: '天气之子',
-        url: 'images/hotmovie1.png'
-    },
-    {
-        name: '五亿探长雷洛传1:雷老虎',
-        url: 'images/hotmovie2.png'
-    },
-    {
-        name: '罗马',
-        url: 'images/hotmovie3.png'
-    },
-    {
-        name: '正义的慈悲',
-        url: 'images/hotmovie4.png'
-    }
-]
+            name: '天气之子',
+            url: 'images/hotmovie1.png'
+        },
+        {
+            name: '五亿探长雷洛传1:雷老虎',
+            url: 'images/hotmovie2.png'
+        },
+        {
+            name: '罗马',
+            url: 'images/hotmovie3.png'
+        },
+        {
+            name: '正义的慈悲',
+            url: 'images/hotmovie4.png'
+        }
+    ]
+    // 选座时电影数据
 let checkedcinema = [{
             name: '五亿探长雷洛传1:雷老虎',
             englishname: 'Lee Rock',

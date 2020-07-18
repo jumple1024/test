@@ -142,48 +142,51 @@ function render(data) {
     })
 }
 
-window.onload = () => {
-    ajax({
-        url: '/movies/gethotmovies',
-        type: 'get',
-        data: '',
-        success: function(msg) {
-            if (msg.isable) {
-                render(msg.data)
-            } else {
-                alert('获取信息失败');
-            }
-        }
-    });
-    let div = document.getElementById('hotmovies');
-    div.addEventListener('click', (e) => {
-        let btn = e.target;
-        if (btn.className == 'btn') {
-            let t = lanjie();
-            if (t) {
-                let id = btn.getAttribute('data-id');
-                switch (id) {
-                    case '天气之子':
-                        window.location.href = encodeURI(`moviecinema.html?天气之子`)
-                        break;
-                    case '五亿探长雷洛传1:雷老虎':
-                        window.location.href = `moviecinema.html?五亿探长雷洛传1:雷老虎`
-                        break;
-                    case '罗马':
-                        window.location.href = `moviecinema.html?罗马`
-                        break;
-                    case '正义的慈悲':
-                        window.location.href = `moviecinema.html?正义的慈悲`
-                        break;
-                }
-            } else {
-                alert('请登录后使用');
-                window.location.href = 'login.html'
-            }
-        }
-    })
-}
 
+window.onload = () => {
+        // 获取电影信息
+        ajax({
+            url: '/movies/gethotmovies',
+            type: 'get',
+            data: '',
+            success: function(msg) {
+                if (msg.isable) {
+                    render(msg.data)
+                } else {
+                    alert('获取信息失败');
+                }
+            }
+        });
+        // 添加点击事件
+        let div = document.getElementById('hotmovies');
+        div.addEventListener('click', (e) => {
+            let btn = e.target;
+            if (btn.className == 'btn') {
+                let t = lanjie();
+                if (t) {
+                    let id = btn.getAttribute('data-id');
+                    switch (id) {
+                        case '天气之子':
+                            window.location.href = encodeURI(`moviecinema.html?天气之子`)
+                            break;
+                        case '五亿探长雷洛传1:雷老虎':
+                            window.location.href = `moviecinema.html?五亿探长雷洛传1:雷老虎`
+                            break;
+                        case '罗马':
+                            window.location.href = `moviecinema.html?罗马`
+                            break;
+                        case '正义的慈悲':
+                            window.location.href = `moviecinema.html?正义的慈悲`
+                            break;
+                    }
+                } else {
+                    alert('请登录后使用');
+                    window.location.href = 'login.html'
+                }
+            }
+        })
+    }
+    // 判断是否登录
 function lanjie() {
     var url = window.location.href;
     var backToPreUrl = url.split("?");

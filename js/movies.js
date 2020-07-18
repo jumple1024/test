@@ -16,7 +16,7 @@ function render(data) {
         list.appendChild(model);
     })
 }
-
+// 获取电影院信息
 window.onload = () => {
     ajax({
         url: '/movies/getmovies',

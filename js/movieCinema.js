@@ -32,7 +32,7 @@ function render(data) {
         list.appendChild(model);
     })
 }
-
+// 生成电影服务小标签
 function hint(data) {
     let p = '';
     data.forEach(value => {
@@ -42,6 +42,7 @@ function hint(data) {
     })
     return p
 }
+// 获取电影信息
 window.onload = () => {
     ajax({
         url: '/cinema/getcinemas',
